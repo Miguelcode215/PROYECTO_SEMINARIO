@@ -1,0 +1,16 @@
+{% extends "templates/index.html" %}
+{% load static %}
+{% block content %}
+    <h1>Visualización de Ventas Diarias</h1>
+    <img src="{% static 'images/grafica.png' %}" alt="Gráfica de Ventas Diarias">
+    
+    <h1>Detección de Anomalías</h1>
+    <img src="{% static 'images/anomalies.png' %}" alt="Gráfica de Anomalías">
+
+    <h2>Fechas con Anomalías:</h2>
+    <ul>
+        {% for date in anomalous_dates %}
+            <li>{{ date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

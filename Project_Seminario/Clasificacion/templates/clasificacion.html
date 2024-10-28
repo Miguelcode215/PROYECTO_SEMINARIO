@@ -1,0 +1,8 @@
+{% extends "templates/index.html" %}
+{% block content %}
+<form method="post" enctype="multipart/form-data" action="{% url 'clasificacion' %}">
+    {% csrf_token %}
+    <input type="file" name="image" accept="image/*">
+    <button type="submit">Subir y Clasificar</button>
+</form>
+{% endblock %}
