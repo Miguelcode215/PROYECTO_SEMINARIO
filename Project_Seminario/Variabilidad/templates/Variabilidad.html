@@ -1,0 +1,27 @@
+{% extends "templates/index.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis de Ventas</title>
+</head>
+<body>
+    <h1>Análisis de Ventas</h1>
+
+    <h2>Ventas por Día de la Semana</h2>
+    <img src="data:image/png;base64,{{ chart1 }}" alt="Ventas por Día de la Semana">
+
+    <h2>Tendencia de Ventas Mensuales</h2>
+    <img src="data:image/png;base64,{{ chart2 }}" alt="Tendencia de Ventas Mensuales">
+
+    <h2>Descomposición de Series Temporales</h2>
+    <img src="data:image/png;base64,{{ chart3 }}" alt="Descomposición de Series Temporales">
+
+    <h2>Métricas de Variabilidad</h2>
+    <p><strong>Variabilidad Diaria:</strong> {{ variabilidad_diaria }}</p>
+    <p><strong>Variabilidad Mensual:</strong> {{ variabilidad_mensual }}</p>
+</body>
+</html>
+{% endblock %}

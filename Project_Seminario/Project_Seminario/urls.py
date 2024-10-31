@@ -20,12 +20,15 @@ from Anomalias.views import Deteccion_Anomalias
 from django.conf import settings
 from django.conf.urls.static import static
 from Clasificacion.views import image_classification_view
-
+from Productos_CH.views import mostrar_graficos
+from Variabilidad.views import analisis_ventas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('anomalias', Deteccion_Anomalias, name='anomalias'),
-    path('clasificacion', image_classification_view, name='clasificacion')
+    path('clasificacion', image_classification_view, name='clasificacion'),
+    path('graficosCH', mostrar_graficos, name='graficosCH'),
+    path('variabilidad', analisis_ventas, name='variabilidad'),
 ]
 
 if settings.DEBUG:

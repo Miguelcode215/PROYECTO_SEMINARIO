@@ -1,0 +1,21 @@
+{% extends "templates/index.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráficos de Ventas</title>
+</head>
+<body>
+    <h1>Top 10 Productos Más Vendidos (por Cantidad de Unidades)</h1>
+    <img src="data:image/png;base64,{{ chart1 }}" alt="Gráfico de Cantidad Total Vendida">
+
+    <h1>Top 10 Productos Más Vendidos (por Ventas Totales en S/)</h1>
+    <img src="data:image/png;base64,{{ chart2 }}" alt="Gráfico de Ventas Totales">
+
+    <h1>Top 10 Productos Más Vendidos en Agosto y Septiembre</h1>
+    <img src="data:image/png;base64,{{ chart3 }}" alt="Gráfico Comparativo Agosto y Septiembre">
+</body>
+</html>
+{% endblock %}
